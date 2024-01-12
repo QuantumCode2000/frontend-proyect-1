@@ -1,0 +1,56 @@
+.sidebar {
+
+    width: 20rem;
+    background-color: #46494c;
+    height: 100vh;
+    min-width: 20rem;
+
+}
+
+.sidebar .perfil-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-bottom: 1px solid #2f3136;
+    max-height: 20rem;
+}
+
+.sidebar .perfil-usuario img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.sidebar .perfil-usuario .text-perfil {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.sidebar .opciones-sidebar .opcion-sidebar {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #2f3136;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.salir {
+    /* quiero que este este en la esqyuina superior izqueirda */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* quiero que este en la esqyuina superior izqueirda */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+
+}
