@@ -1,4 +1,5 @@
 import './Sidebar.styles.css'
+import { Link } from 'react-router-dom'
 const Sidebar = () => {
 
     return (
@@ -10,22 +11,36 @@ const Sidebar = () => {
                     <div className="text-perfil rol-usuario">Rol usuario</div>
                 </div>
                 <div className="opciones-sidebar">
-                    <div className="opcion-sidebar">
-                        <div className="text-opcion">Perfil</div>
-                    </div>
-                    <div className="opcion-sidebar">
-                        <div className="text-opcion">Crear Usuarios</div>
-                    </div>
-                    <div className="opcion-sidebar">
-                        <div className="text-opcion">Administrar permisos</div>
-                    </div>
-                    <div className="opcion-sidebar">
-                        <div className="text-opcion">Ver usuarios</div>
-                    </div>
+                    <Link to="/perfil">
+                        <div className="opcion-sidebar">
+                            <div className="text-opcion">
+
+                                Perfil
+                            </div>
+                        </div>
+                    </Link>
+                    <Link to="/crear-usuarios">
+                        <div className="opcion-sidebar">
+                            <div className="text-opcion">Crear Usuarios</div>
+                        </div>
+                    </Link>
+
+                    <Link to="administrar-usuarios">
+                        <div className="opcion-sidebar">
+                            <div className="text-opcion">Administrar usuarios</div>
+                        </div>
+                    </Link>
+                    <Link to="ver-usuarios">
+                        <div className="opcion-sidebar">
+                            <div className="text-opcion">Ver usuarios</div>
+                        </div>
+                    </Link>
+                    <Link to="/cerrar-sesion">
+                        <div className="opcion-sidebar">
+                            <div className="text-opcion">Cerrar sesión</div>
+                        </div>
+                    </Link>
                 </div>
-            </div>
-            <div className="salir">
-                <div className="text-opcion">Salir</div>
             </div>
         </main>
     )
