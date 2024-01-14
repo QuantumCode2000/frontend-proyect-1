@@ -1,0 +1,30 @@
+.user-create-box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: calc(100% - 20rem);
+
+
+}
+
+.table-user {
+    width: calc(100% - 4rem);
+    margin: 2rem;
+    border-collapse: collapse;
+    border: 1px solid #2f3136;
+}
+
+.table-user th {
+    background-color: #2f3136;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+}
+
+.table-user td {
+    padding: 1rem;
+    border-bottom: 1px solid #2f3136;
+}
