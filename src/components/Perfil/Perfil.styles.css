@@ -6,6 +6,7 @@ button {
     height: 30px;
     width: 150px;
 }
+.box4 
 th {
     padding: 10px;
     border: 1px solid #ddd;
@@ -13,7 +14,15 @@ th {
     display: flex;
     justify-content: space-between;
 }
+.container-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20rem);
+}
 .container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -25,29 +34,31 @@ th {
     min-width: 150px;
     height: 100%;
     text-align: center;
-    border-radius: 3px;
+    
 }
 .box1 {
-    background-color: mediumturquoise;
+    background-color: #46494C;
     text-align: end;
     height: 50px;
+    width: 100%;
 }
 .box1 .header-title {
     width: 95%;
     margin: 5px;
+    color: white;
 }
 .box2 {
-    background-color: gray;
+    background-color: #4C5C68;
     text-align: start;
 }
 .box2 .body-title {
     margin: 5px;
 }
 .box3 {
-    background-color: blue;
+    background-color: #1985A1;
 }
 .box4 {
-    background-color: aqua;
+    background-color: #DCDCDD;
 }
 @media (min-width: 600px) {
     .box2 {
