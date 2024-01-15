@@ -1,8 +1,10 @@
 import "./Perfil.styles.css"
 const Perfil = () => {
     return (
-        <body>
-        <main className="container">
+
+        <div className="container-perfil">
+         <main className="container">
+
              <div className="box1">
                 <h1 className="header-title">Perfil</h1>
              </div>
@@ -13,7 +15,8 @@ const Perfil = () => {
                 <h2>Datos</h2>
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" className="rounded-circle" width={150}></img>
                 
-                
+
+
                 <h3></h3><button>Cargar Imagen</button>
                 <h3>Nombre del usuario</h3>
                 <p>Correo</p>
@@ -36,7 +39,9 @@ const Perfil = () => {
                 <h1></h1><button>Actualizar Información</button>
              </div>
         </main>
-        </body>
+        </div>
+        
+        
     )
 }
 
