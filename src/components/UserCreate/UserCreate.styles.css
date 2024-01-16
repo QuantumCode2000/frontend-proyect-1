@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: calc(100% - 20rem);
+
 }
 
 .table-user {
@@ -24,4 +24,10 @@
 .table-user td {
     padding: 1rem;
     border-bottom: 1px solid #2f3136;
+}
+
+
+.user-create {
+    display: flex;
+    border: 1px solid #2f3136;
 }

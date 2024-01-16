@@ -10,12 +10,10 @@ import Perfil from './components/Perfil/Perfil.jsx'
 import UserCreate from './components/UserCreate/UserCreate.jsx'
 import UserAdmin from './components/UserAdmin/UserAdmin.jsx'
 import ViewUser from './components/ViewUser/ViewUser.jsx'
+import { UserProvider } from './contexts/UserContext.jsx'
+import { UsersProvider } from './contexts/UsersContext.jsx'
 
 const routes = [
-  {
-    path: "login",
-    element: <Login />,
-  },
   {
     path: "perfil",
     element: <Perfil />,
@@ -26,15 +24,15 @@ const routes = [
   },
   {
     path: "administrar-usuarios",
-    element: <UserAdmin />,
-  },
-  {
-    path: "ver-usuarios",
     element: <ViewUser />,
   },
 ]
 
 const router = createBrowserRouter([
+  {
+    path: "login",
+    element: <Login />,
+  },
   {
     path: '/',
     element: <Layout />,
@@ -44,6 +42,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={ router } />
+    <UserProvider>
+      <UsersProvider>
+        <RouterProvider router={ router } />
+      </UsersProvider>
+    </UserProvider>
   </React.StrictMode>,
 )
+
+
