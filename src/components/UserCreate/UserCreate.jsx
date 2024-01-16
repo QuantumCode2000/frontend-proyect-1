@@ -58,52 +58,52 @@ const UserCreate = () => {
     return (
         <main className="window-content user-create-box">
             <div className="user-create">
-                <h2>Crear Usuario</h2>
+                <h2 className="title-user-create">Crear Usuario</h2>
                 <form action=""
                     onSubmit={
                         handleSumbit
                     }
                 >
-                    <h3>Nombre/s</h3>
+                    <h3 className="content-letter-user-create">Nombre/s:</h3>
                     <input
-                        type="text"
+                        type="text" className="form-user-create"
                         id="nombre"
                         name="nombre"
                         value={ valuesForm.nombre }
                         onChange={ handleChange }
                     />
-                    <h3>Apellido Paterno</h3>
-                    <input type="text"
+                    <h3 className="content-letter-user-create">Apellido Paterno:</h3>
+                    <input type="text" className="form-user-create"
                         id="apellidoPaterno"
                         name="apellidoPaterno"
                         value={ valuesForm.apellidoPaterno }
                         onChange={ handleChange }
 
                     />
-                    <h3>Apellido Materno</h3>
-                    <input type="text"
+                    <h3 className="content-letter-user-create">Apellido Materno:</h3>
+                    <input type="text" className="form-user-create"
                         id="apellidoMaterno"
                         name="apellidoMaterno"
                         value={ valuesForm.apellidoMaterno }
                         onChange={ handleChange }
 
                     />
-                    <h3>Correo</h3>
-                    <input type="text"
+                    <h3 className="content-letter-user-create">Correo:</h3>
+                    <input type="text" className="form-user-create"
                         id="correo"
                         name="correo"
                         value={ valuesForm.correo }
                         onChange={ handleChange }
                     />
-                    <h3>Contraseña</h3>
-                    <input type="text"
+                    <h3 className="content-letter-user-create">Contraseña:</h3>
+                    <input type="text" className="form-user-create"
                         id="contraseña"
                         name="contraseña"
                         value={ valuesForm.contraseña }
                         onChange={ handleChange }
                     />
-                    <h3>Tipo de Usuario</h3>
-                    <input type="text"
+                    <h3 className="content-letter-user-create">Tipo de Usuario:</h3>
+                    <input type="text" className="form-user-create"
                         id="tipoUsuario"
                         name="tipoUsuario"
                         value={ valuesForm.tipoUsuario }
@@ -112,7 +112,7 @@ const UserCreate = () => {
                     <button onClick={
                         cleanForm
                     }
-                        type="submit">Crear</button>
+                        type="submit" className="boton">Crear</button>
                 </form>
             </div>
 

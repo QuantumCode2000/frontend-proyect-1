@@ -4,30 +4,49 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: aqua;
 
 }
 
-.table-user {
-    width: calc(100% - 4rem);
-    margin: 2rem;
-    border-collapse: collapse;
-    border: 1px solid #2f3136;
+.title-user-create {
+    text-align: center;
 }
-
-.table-user th {
-    background-color: #2f3136;
-    color: #fff;
-    padding: 1rem;
+.content-letter-user-create {
     text-align: left;
-}
-
-.table-user td {
-    padding: 1rem;
-    border-bottom: 1px solid #2f3136;
-}
-
-
-.user-create {
+} 
+.form-user-create {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
     display: flex;
-    border: 1px solid #2f3136;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
+.user-create {
+    width: calc(100% - 80rem);
+    
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    border-radius: 0.5rem;
+    
+}
+
+.boton {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+    /* display: block;
+    margin-top: 1rem; */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
