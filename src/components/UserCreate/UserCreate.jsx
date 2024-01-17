@@ -1,14 +1,14 @@
 import "./UserCreate.styles.css"
-import TableTitle from "../../modules/TableTitle"
-import TableContent from "../../modules/TableContent"
 import { useContext } from "react"
 import UsersContext from "../../contexts/UsersContext"
 import { useState } from "react"
-
+import CustomInput from "../../customs/CustomInput/CustomInput"
+import { MdDriveFileRenameOutline, MdEmail, MdPassword } from "react-icons/md";
+import { GrUserWorker } from "react-icons/gr";
+import CustomButton from "../../customs/CustomButton/CustomButton"
 const UserCreate = () => {
     const data = useContext(UsersContext);
     const [viewCreateUser, setCreateUser] = useState(false);
-    const dataTitle = ["Id", "Nombre/s", "Apellido Paterno", "Apellido Materno", "Correo", "Contraseña", "Tipo de Usuario", "Accion"]
     const objects = data;
     const initData = {
         nombre: "",
@@ -58,68 +58,70 @@ const UserCreate = () => {
     return (
         <main className="window-content user-create-box">
             <div className="user-create">
-                <h2 className="title-user-create">Crear Usuario</h2>
+                <h2 className="title-user-create">Ingrese los datos del nuevo personal</h2>
                 <form action=""
                     onSubmit={
                         handleSumbit
                     }
                 >
-                    <h3 className="content-letter-user-create">Nombre/s:</h3>
-                    <input
-                        type="text" className="form-user-create"
-                        id="nombre"
-                        name="nombre"
+
+                    <CustomInput
+                        icon={ <MdDriveFileRenameOutline /> }
+                        label="Nombre"
+                        placeholder="Ingrese su nombre"
                         value={ valuesForm.nombre }
                         onChange={ handleChange }
+                        name="nombre"
                     />
-                    <h3 className="content-letter-user-create">Apellido Paterno:</h3>
-                    <input type="text" className="form-user-create"
-                        id="apellidoPaterno"
-                        name="apellidoPaterno"
+                    <CustomInput
+                        icon={ <MdDriveFileRenameOutline /> }
+                        label="Apellido Paterno"
+                        placeholder="Ingrese su apellido paterno"
                         value={ valuesForm.apellidoPaterno }
                         onChange={ handleChange }
-
+                        name="apellidoPaterno"
                     />
-                    <h3 className="content-letter-user-create">Apellido Materno:</h3>
-                    <input type="text" className="form-user-create"
-                        id="apellidoMaterno"
-                        name="apellidoMaterno"
+                    <CustomInput
+                        icon={ <MdDriveFileRenameOutline /> }
+                        label="Apellido Materno"
+                        placeholder="Ingrese su apellido materno"
                         value={ valuesForm.apellidoMaterno }
                         onChange={ handleChange }
-
+                        name="apellidoMaterno"
                     />
-                    <h3 className="content-letter-user-create">Correo:</h3>
-                    <input type="text" className="form-user-create"
-                        id="correo"
-                        name="correo"
+                    <CustomInput
+                        icon={ <MdEmail /> }
+                        label="Correo"
+                        placeholder="Ingrese su correo"
                         value={ valuesForm.correo }
                         onChange={ handleChange }
+                        name="correo"
                     />
-                    <h3 className="content-letter-user-create">Contraseña:</h3>
-                    <input type="text" className="form-user-create"
-                        id="contraseña"
-                        name="contraseña"
+                    <CustomInput
+                        icon={ <MdPassword /> }
+                        label="Contraseña"
+                        placeholder="Ingrese su contraseña"
                         value={ valuesForm.contraseña }
                         onChange={ handleChange }
+                        name="contraseña"
                     />
-                    <h3 className="content-letter-user-create">Tipo de Usuario:</h3>
-                    <input type="text" className="form-user-create"
-                        id="tipoUsuario"
-                        name="tipoUsuario"
+                    <CustomInput
+                        icon={ <GrUserWorker /> }
+                        label="Tipo de Usuario"
+                        placeholder="Ingrese su tipo de usuario"
                         value={ valuesForm.tipoUsuario }
                         onChange={ handleChange }
+                        name="tipoUsuario"
                     />
-                    <button onClick={
-                        cleanForm
-                    }
-                        type="submit" className="boton">Crear</button>
+
+                    <CustomButton
+                        content="Crear"
+                        onClick={ cleanForm }
+                        type="submit"
+                    />
                 </form>
             </div>
 
-            {/* <table className="table-user">
-                <TableTitle prop={ dataTitle } />
-                <TableContent prop={ objects } />
-            </table> */}
         </main >
     )
 }

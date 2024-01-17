@@ -1,8 +1,7 @@
 .sidebar {
-    width: 30rem;
+    width: 35rem;
     background-color: #353a40;
     height: 100vh;
-
 }
 
 .sidebar .perfil-usuario {
@@ -32,7 +31,6 @@
 
 .sidebar .opciones-sidebar .opcion-sidebar {
     display: flex;
-    ;
     align-items: center;
     padding: 1rem 2rem;
     cursor: pointer;
@@ -43,9 +41,8 @@
 }
 
 .sidebar .opciones-sidebar .opcion-sidebar:hover {
-    background-color: #EBEAEB;
+    background-color: #3085d6;
     border-radius: 0.5rem;
-    color: #353a40;
 }
 
 .sidebar a {
@@ -55,9 +52,9 @@
 .opcion-sidebar .text-opcion {
     margin-left: 1.5rem;
     letter-spacing: 0.2rem;
+    font-size: 1.8rem;
 }
 
 .opcion-sidebar .icon {
     font-size: 3rem;
-
 }

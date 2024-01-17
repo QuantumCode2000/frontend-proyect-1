@@ -1,44 +1,29 @@
 import TableContent from "../../modules/TableContent"
 import TableTitle from "../../modules/TableTitle"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import UsersContext from "../../contexts/UsersContext"
-
+import CustomInput from "../../customs/CustomInput/CustomInput"
+import CustomButton from "../../customs/CustomButton/CustomButton"
+import CustomTable from "../../customs/CustomTable/CustomTable"
+import "./ViewUser.styles.css"
 const ViewUser = () => {
   const dataTitle = ["Id", "Nombre/s", "Apellido Paterno", "Apellido Materno", "Correo", "Contraseña", "Tipo de Usuario", "Accion"]
   const data = useContext(UsersContext);
-  const [search, setSearch] = useState("");
-  const [userSearch, setUserSearch] = useState(data);
-
-
-  const handleChange = (e) => {
-    const { target } = e;
-    const { value } = target;
-    setSearch(value);
-    searchUser();
-  }
-  const searchUser = () => {
-    const user = userSearch.filter((item) => item.nombre === search);
-    setUserSearch(user);
-  }
-
-
-  console.log(search);
-
   return (
     <main className=" window-content user-create-box">
-
-      <div className="search-box">
-        <input type="text"
-          value={ search }
-          onChange={ handleChange }
-
+      <div className="search_elements">
+        <CustomInput
+          placeholder="Inserte Numero de Identificacion"
+          type="number"
         />
-        <button>Buscar Usuario</button>
+        <CustomButton
+          content="Buscar"
+        />
       </div>
-
+      <CustomTable />
       <table className="table-user">
         <TableTitle prop={ dataTitle } />
-        <TableContent prop={ userSearch } />
+        <TableContent prop={ data } />
       </table>
     </main >
   )

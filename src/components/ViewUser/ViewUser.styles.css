@@ -1,0 +1,6 @@
+.search_elements {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 90%;
+    align-items: center;
+}
