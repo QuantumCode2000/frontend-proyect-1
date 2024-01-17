@@ -7,6 +7,8 @@ import CustomInput from "../../customs/CustomInput/CustomInput"
 import { MdDriveFileRenameOutline, MdEmail, MdPassword } from "react-icons/md";
 import { GrUserWorker } from "react-icons/gr";
 import CustomButton from "../../customs/CustomButton/CustomButton"
+import Alert from '@mui/material/Alert';
+
 const UserCreate = () => {
     const data = useContext(UsersContext);
     const [viewCreateUser, setCreateUser] = useState(false);
@@ -41,7 +43,6 @@ const UserCreate = () => {
     }
 
     const cleanForm = () => {
-
         handleViewCreateUser();
         addUser();
         setValuesForm(initData);
@@ -52,9 +53,13 @@ const UserCreate = () => {
             ...valuesForm,
             id: objects.length + 1,
         };
-        setValuesForm(newValues);
-        objects.push(newValues);
-        console.log(objects);
+        if (newValues.nombre !== "" && newValues.apellidoPaterno !== "" && newValues.apellidoMaterno !== "" && newValues.correo !== "" && newValues.contraseña !== "" && newValues.tipoUsuario !== "") {
+            setValuesForm(newValues);
+            objects.push(newValues);
+        }
+        else {
+            alert("Llene todos los campos");
+        }
     }
     return (
         <main className="window-content user-create-box">
@@ -65,7 +70,7 @@ const UserCreate = () => {
                         handleSumbit
                     }
                 >
-
+                    <Alert severity="success">This is a success Alert.</Alert>
                     <CustomInput
                         icon={ <MdDriveFileRenameOutline /> }
                         label="Nombre"
