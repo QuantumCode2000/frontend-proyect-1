@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 {
   "name": "frontend-project-1",
   "private": true,
@@ -29,4 +28,3 @@
     "vite": "^5.0.8"
   }
 }
->>>>>>> main
