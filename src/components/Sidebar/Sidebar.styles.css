@@ -1,0 +1,62 @@
+
+.sidebar {
+    width: 35rem;
+    background-color: #353a40;
+    height: 100vh;
+}
+
+.sidebar .perfil-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-bottom: 0.5rem solid #3e434a;
+    max-height: 30rem;
+}
+
+.sidebar .perfil-usuario img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.sidebar .perfil-usuario .text-perfil {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    color: #EBEAEB;
+}
+
+.sidebar .opciones-sidebar .opcion-sidebar {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem;
+    flex-direction: center;
+    color: #EBEAEB;
+}
+
+.sidebar .opciones-sidebar .opcion-sidebar:hover {
+    background-color: #3085d6;
+    border-radius: 0.5rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.opcion-sidebar .text-opcion {
+    margin-left: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
+}
+
+.opcion-sidebar .icon {
+    font-size: 3rem;
+}
+
