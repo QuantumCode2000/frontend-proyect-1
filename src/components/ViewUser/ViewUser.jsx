@@ -9,10 +9,7 @@ import CustomTable from "../../customs/CustomTable/CustomTable"
 import "./ViewUser.styles.css";
 import { userHeadersTable } from "../../utils/headersTable"
 const ViewUser = () => {
-  // const dataTitle = ["Id", "Nombre/s", "Apellido Paterno", "Apellido Materno", "Correo", "Contraseña", "Tipo de Usuario", "Accion"]
   const data = useContext(UsersContext);
-  console.log(userHeadersTable);
-
   return (
     <main className=" window-content user-create-box">
       <div className="search_elements">

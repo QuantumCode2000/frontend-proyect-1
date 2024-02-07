@@ -7,13 +7,15 @@ import CustomInput from "../../customs/CustomInput/CustomInput"
 import { MdDriveFileRenameOutline, MdEmail, MdPassword } from "react-icons/md";
 import { GrUserWorker } from "react-icons/gr";
 import CustomButton from "../../customs/CustomButton/CustomButton"
-import Alert from '@mui/material/Alert';
+import { AiOutlineFieldNumber } from "react-icons/ai";
+// import Alert from '@mui/material/Alert';
 
 const UserCreate = () => {
     const data = useContext(UsersContext);
     const [viewCreateUser, setCreateUser] = useState(false);
     const objects = data;
     const initData = {
+        numeroIdentificacion: "",
         nombre: "",
         apellidoPaterno: "",
         apellidoMaterno: "",
@@ -21,6 +23,7 @@ const UserCreate = () => {
         contraseña: "",
         tipoUsuario: "",
     }
+
     const [valuesForm, setValuesForm] = useState(initData);
 
     console.log(valuesForm);
@@ -70,7 +73,16 @@ const UserCreate = () => {
                         handleSumbit
                     }
                 >
-                    <Alert severity="success">This is a success Alert.</Alert>
+                    <CustomInput
+                        icon={ <AiOutlineFieldNumber /> }
+                        label="Numero de Identificación"
+                        placeholder="Ingrese su ID"
+                        value={ valuesForm.numeroIdentificacion }
+                        onChange={ handleChange }
+                        name="numeroIdentificacion"
+                        type="text"
+                    />
+
                     <CustomInput
                         icon={ <MdDriveFileRenameOutline /> }
                         label="Nombre"
@@ -78,6 +90,7 @@ const UserCreate = () => {
                         value={ valuesForm.nombre }
                         onChange={ handleChange }
                         name="nombre"
+                        type="text"
                     />
                     <CustomInput
                         icon={ <MdDriveFileRenameOutline /> }
@@ -86,6 +99,7 @@ const UserCreate = () => {
                         value={ valuesForm.apellidoPaterno }
                         onChange={ handleChange }
                         name="apellidoPaterno"
+                        type="text"
                     />
                     <CustomInput
                         icon={ <MdDriveFileRenameOutline /> }
@@ -94,6 +108,7 @@ const UserCreate = () => {
                         value={ valuesForm.apellidoMaterno }
                         onChange={ handleChange }
                         name="apellidoMaterno"
+                        type="text"
                     />
                     <CustomInput
                         icon={ <MdEmail /> }
@@ -102,6 +117,8 @@ const UserCreate = () => {
                         value={ valuesForm.correo }
                         onChange={ handleChange }
                         name="correo"
+                        type="email"
+
                     />
                     <CustomInput
                         icon={ <MdPassword /> }
@@ -110,6 +127,7 @@ const UserCreate = () => {
                         value={ valuesForm.contraseña }
                         onChange={ handleChange }
                         name="contraseña"
+                        type="password"
                     />
                     <CustomInput
                         icon={ <GrUserWorker /> }
@@ -118,6 +136,7 @@ const UserCreate = () => {
                         value={ valuesForm.tipoUsuario }
                         onChange={ handleChange }
                         name="tipoUsuario"
+                        type="text"
                     />
 
                     <CustomButton

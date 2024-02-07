@@ -2,9 +2,10 @@ const UsersData = [
     {
         id: 1,
         numeroIdentificacion: "12345678",
-        nombre: "Ainhoa",
-        apellidoPaterno: "López",
-        apellidoMaterno: "García",
+        
+            nombre: "Ainhoa",
+            apellidoPaterno: "López",
+            apellidoMaterno: "García",
         correo: "ainhoalopezgarcia@gmail.com",
         contraseña: "xxxxxxxxxx",
         tipoUsuario: "Psicologo",
@@ -23,3 +24,5 @@ const UsersData = [
 ];
 
 export { UsersData };
+
+// generame un modelo de api que se pueda consumir en el front

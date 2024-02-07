@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import CustomTableRow from "./CustomTableRow";
 import "./CustomTable.styles.css";
 const CustomTable = ({ headerData, bodyData }) => {
-    const header = Object.keys(headerData)    // console.log(headerData);
+    const header = Object.keys(headerData)
+    console.log(header)
+    console.log(bodyData)
     return (
         <>
             <table>

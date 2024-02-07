@@ -4,7 +4,12 @@ const CustomButton = ({ ...props }) => {
     return (
         <>
             <button
-                className="custom-button"
+                typeBoton={ props.typeBoton }
+                className={
+                    props.typeBoton === undefined
+                        ? "custom-button "
+                        : `custom-button ${props.typeBoton}`
+                }
                 onClick={ props.onClick }
                 type={ props.type }
 

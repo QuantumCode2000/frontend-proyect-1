@@ -8,7 +8,7 @@ import Layout from './layouts/Layout.jsx'
 // import Sidebar from './components/Sidebar/Sidebar.jsx'
 import Perfil from './components/Perfil/Perfil.jsx'
 import UserCreate from './components/UserCreate/UserCreate.jsx'
-import UserAdmin from './components/UserAdmin/UserAdmin.jsx'
+// import UserAdmin from './components/UserAdmin/UserAdmin.jsx'?
 import ViewUser from './components/ViewUser/ViewUser.jsx'
 import { UserProvider } from './contexts/UserContext.jsx'
 import { UsersProvider } from './contexts/UsersContext.jsx'
